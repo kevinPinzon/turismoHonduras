@@ -34,7 +34,7 @@ public class activity_add extends AppCompatActivity {
         Place place = new Place();
         place.setTitle(title.getText().toString());
         place.setDescription(description.getText().toString());
-        place.setPictureUrl(pictureUrl.getText().toString());
+//        place.setPictureUrl(pictureUrl.getText().toString());
 
 
         db.addPlace(place);

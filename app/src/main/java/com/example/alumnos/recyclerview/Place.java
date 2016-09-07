@@ -1,8 +1,5 @@
 package com.example.alumnos.recyclerview;
 
-/**
- * Created by Alumnos on 26/8/2016.
- */
 public class Place {
     private String pictureUrl;
     private String title;
@@ -14,6 +11,12 @@ public class Place {
 
     public Place( int id,String pictureUrl, String title, String description) {
         this.pictureUrl = pictureUrl;
+        this.title = title;
+        this.description = description;
+        this.id = id;
+    }
+
+    public Place( int id, String title, String description) {
         this.title = title;
         this.description = description;
         this.id = id;

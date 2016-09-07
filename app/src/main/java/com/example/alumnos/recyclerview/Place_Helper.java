@@ -27,7 +27,7 @@ public class Place_Helper extends SQLiteOpenHelper {
     private final String KEY_ID = "id";
     private final String KEY_TITLE = "title";
     private final String KEY_DESCRIPTION = "description";
-    private final String KEY_PICTUREURL = "pictureUrl";
+//    private final String KEY_PICTUREURL = "pictureUrl";
 
     public Place_Helper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -47,7 +47,7 @@ public class Place_Helper extends SQLiteOpenHelper {
         sql.append("id INTEGER PRIMARY KEY AUTOINCREMENT,");
         sql.append("title TEXT,");
         sql.append("description TEXT)");
-        sql.append("pictureUrl TEXT,");
+//        sql.append("pictureUrl TEXT,");
 
         db.execSQL(sql.toString());
     }
@@ -63,7 +63,7 @@ public class Place_Helper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(KEY_TITLE, place.getTitle());
         values.put(KEY_DESCRIPTION, place.getDescription());
-        values.put(KEY_PICTUREURL, place.getPictureUrl());
+//        values.put(KEY_PICTUREURL, place.getPictureUrl());
 
         Log.d("newPlace:",place.getTitle());
 
@@ -86,7 +86,7 @@ public class Place_Helper extends SQLiteOpenHelper {
             place.setId(cursor.getInt(0));
             place.setTitle(cursor.getString(1));
             place.setDescription(cursor.getString(2));
-            place.setPictureUrl(cursor.getString(3));
+//            place.setPictureUrl(cursor.getString(3));
 
             places.add(place);
         }
@@ -96,7 +96,7 @@ public class Place_Helper extends SQLiteOpenHelper {
             place.setId(cursor.getInt(0));
             place.setTitle(cursor.getString(1));
             place.setDescription(cursor.getString(2));
-            place.setPictureUrl(cursor.getString(3));
+//            place.setPictureUrl(cursor.getString(3));
 
             places.add(place);
         }

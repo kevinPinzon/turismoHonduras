@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         places = new ArrayList<>();
         missingPlaces = new ArrayList<>();
 
-        dbHelper = Place_Helper.newInstance(this);
-        places = dbHelper.getAllPlace();
-        placeAdapter = new PlaceAdapter(places, this);
+//        dbHelper = Place_Helper.newInstance(this);
+//        places = dbHelper.getAllPlace();
+//        placeAdapter = new PlaceAdapter(places, this);
 
         setToolbar();
         setNavigationDrawer();
@@ -177,11 +177,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
-        places.clear();
-        places.addAll(dbHelper.getAllPlace());
-        placeAdapter.notifyDataSetChanged();
-    }
+//    @Override
+//    protected void onPostResume() {
+//        super.onPostResume();
+//        places.clear();
+//        places.addAll(dbHelper.getAllPlace());
+//        placeAdapter.notifyDataSetChanged();
+//    }
 }
