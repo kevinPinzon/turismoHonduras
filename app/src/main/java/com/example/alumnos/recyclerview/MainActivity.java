@@ -101,14 +101,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, activity_add.class);
-                startActivity(intent);
+            //    Intent intent = new Intent(MainActivity.this, activity_add.class);
+              //  startActivity(intent);
 
-//                if (missingPlaces.size() > 0) {
-//                    places.add(0, missingPlaces.remove(0));
-//                    placeAdapter.notifyItemInserted(0);
-//                    recyclerView.smoothScrollToPosition(0);
-//                }
+                if (missingPlaces.size() > 0) {
+                    places.add(0, missingPlaces.remove(0));
+                    placeAdapter.notifyItemInserted(0);
+                    recyclerView.smoothScrollToPosition(0);
+                }
 
             }
         });
